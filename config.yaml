@@ -8,16 +8,16 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor traning for instance)
 # incubator: The Carpentries Incubator
-carpentry: 'incubator'
+carpentry: 'dc'
 
 # Overall title for pages.
-title: 'Lesson Title'
+title: 'FAIR Data Management for Long-term Agriculture Experiments'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~
+created: 2023-02-14
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries'
+keywords: 'FAIR, data, long-term experiments, agriculture, metadata, data management'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -27,13 +27,13 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md'
+source: 'https://github.com/carpentries-incubator/fair-data-management-agriculture'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org'
+contact: 'richard.ostler@rothamsted.ac.uk'
 
 # Navigation ------------------------------------------------
 #
