@@ -6,7 +6,7 @@
 # swc: Software Carpentry
 # dc: Data Carpentry
 # lc: Library Carpentry
-# cp: Carpentries (to use for instructor traning for instance)
+# cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
 carpentry: 'dc'
 
@@ -14,7 +14,7 @@ carpentry: 'dc'
 title: 'FAIR Data Management for Long-term Agriculture Experiments'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2023-02-14
+created: ~
 
 # Comma-separated list of keywords for the lesson
 keywords: 'FAIR, data, long-term experiments, agriculture, metadata, data management'
@@ -60,6 +60,7 @@ contact: 'richard.ostler@rothamsted.ac.uk'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- fair-data.Rmd
 
 # Information for Learners
 learners: 
