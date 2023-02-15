@@ -1,102 +1,36 @@
 ---
-title: "Using Markdown"
+title: "Introduction to FAIR Data Management for Long-term Agriculture Experiments"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What will I learn from this lesson?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Understand the purpose of this lesson.
+- Explain what l-term agricultural are and why good data management is important. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+This lesson is aimed at long-term agricultural experiment (LTE) managers and researchers interested in using long-term agricultural experiments, who want to apply open science and good research data management practices to their LTE data.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+The lesson is split into five episodes:
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+1. Data Sharing
+2. FAIR Principles
+3. Metadata for LTEs
+4. Organising your LTE data
+5. Publishing your LTE data
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+### What are long-term agricultural experiments?
+Long-term agricultural experiments are multi-year field experiments testing a range of different treatments to assess the sustainability of crop production and soil health over time ([Johnston & Poulton, 2018](https://doi.org/10.1111/ejss.12521)). Field experiments are considered long-term if they have at least 10 years of continuous treatments; the longest running experiment is [Broadbalk wheat](https://www.era.rothamsted.ac.uk/experiment/rbk1), located at Rothamsted, UK, and has been running for 180 years. Globally there are many hundreds of LTEs. The [Global Long-Term agricultural Experiments Network - GLTEN](glten) lists over 250 experiments, while the German [BonaRes](https://lte.bonares.de/) repository contains information for over 450 LTEs in Europe. 
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-[r-markdown]: https://rmarkdown.rstudio.com/
+### Why are long-term agricultural experiments important?
+LTEs are important sources of long-term data on crops and soils which can be used to assess the sustainability of different agricultural practices and farming systems overtime. Today, as society attempts to address global challenges faced by climate change and food security, this data can provide critical insights and knowledge to help us adapt to and address these challenges.
