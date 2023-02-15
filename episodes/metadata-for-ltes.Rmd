@@ -1,5 +1,5 @@
 ---
-title: 'metadata-for-ltes'
+title: 'Metadata for long-term experiments'
 teaching: 10
 exercises: 2
 ---
