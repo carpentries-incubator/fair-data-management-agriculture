@@ -60,7 +60,11 @@ contact: 'richard.ostler@rothamsted.ac.uk'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- sharing-data.Rmd
 - fair-data.Rmd
+- metadata-for-ltes.Rmd
+- organising-data-for-ltes.Rmd
+- publishing-data-for-ltes.Rmd
 
 # Information for Learners
 learners: 
