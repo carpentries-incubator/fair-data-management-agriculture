@@ -182,6 +182,8 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-is-metadata">What is metadata</a></li>
+<li><a href="#glten-metadata-schema">GLTEN Metadata Schema</a></li>
+<li><a href="#making-metadata-fair">Making Metadata FAIR</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -191,7 +193,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="organising-data-for-ltes.html">5. organising-data-for-ltes</a>
+        <a href="organising-data-for-ltes.html">5. Organising data for long-term experiments</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -253,7 +255,7 @@
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="fair-data.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous: Introduction to FAIR</a>
-        <a class="chapter-link float-end" href="organising-data-for-ltes.html" rel="next">Next: organising-data-for-... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="organising-data-for-ltes.html" rel="next">Next: Organising data for... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Metadata for long-term experiments</h1>
@@ -350,10 +352,136 @@ therefore reusable by other researchers. The type of metadata collected
 often depends on the context for the data. Administrative and citation
 metadata are normally common across different datasets and experiments,
 for example, a field experiment and a lab experiment will both have
-information about PIs, funding, abstract, keywords, and identifiers.
-However, the structural metadata will depend on the context for the
-experiment and the data, for example, soil chemistry data will need
-different metadata compared to yield data or diease assessment data</p>
+information about PIs, funding, abstract, keywords, and identifiers. The
+structural metadata will depend on the context. For example, a glass
+house experiment and a field experiment might share the same type of
+metadata to describe the experimental design and the different treatment
+factors, but different metadata to characterise their environment and
+management. Equally different types of data will have specific
+information about how that data originated. For example, soil chemistry
+data and yield data will have different metadata about their sampling
+and analytical methods, but will share metadata about the experiment and
+environment.</p>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="challenge-2.1.-metadata-to-describe-a-long-term-experiment" class="callout-inner">
+<h3 class="callout-title">Challenge 2.1. Metadata to describe a
+long-term experiment<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+</h3>
+<div class="callout-content">
+<p>Make a list of the different metadata you should collect to describe
+your experiment (we’ll look at the data later).</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="glten-metadata-schema"><h2 class="section-heading">GLTEN Metadata Schema<a class="anchor" aria-label="anchor" href="#glten-metadata-schema"></a>
+</h2>
+<hr class="half-width"><p>The GLTEN Metadata Schema has been developed by the Global Long-term
+Experiment Network to provide a consistent description for long term
+agricultural experiments.</p>
+<p>The schema provides detailed metadata to describe a long-term
+experiment including: - Administration - Cropping and rotations -
+Experiment treatment factors - Soil and climate environmental properties
+- Links to related sources including datasets and publications</p>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="challenge-2.2.-review-the-glten-schema" class="callout-inner">
+<h3 class="callout-title">challenge 2.2. Review the GLTEN schema<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+</h3>
+<div class="callout-content">
+<p>Use the GLTEN metadata portal to review find the metadata records for
+our four experiments, how does the metadata compare with your list? You
+can view the full GLTEN metadata schema on Github.</p>
+</div>
+</div>
+</div>
+</section><section id="making-metadata-fair"><h2 class="section-heading">Making Metadata FAIR<a class="anchor" aria-label="anchor" href="#making-metadata-fair"></a>
+</h2>
+<hr class="half-width"><p>Collecting good metadata is essential, but we can make it more
+Findable and Interoperable by using structured metadata schemas and
+annotating by using and controlled vocabularies.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>Schemas are machine processable specifications which define the
+structure and syntax of metadata specifications in a formal schema
+language. The schema defines terms to represent key items of information
+about the resource they describe. For example, a term
+<strong>spatial</strong> would describe the spatial coverage of a
+dataset resource.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="core-metadata-schemas">Core metadata schemas<a class="anchor" aria-label="anchor" href="#core-metadata-schemas"></a></h3>
+<p>Core metadata schemas are used to aid resource discovery. Several
+schemas exist and it is useful to understand their different roles, and
+how they link to each other.</p>
+<div class="section level4">
+<h4 id="dublincore-dcmi-metadata-terms">DublinCore DCMI Metadata Terms<a class="anchor" aria-label="anchor" href="#dublincore-dcmi-metadata-terms"></a></h4>
+<p>This is an ISO standard schema defining 15 core elements for
+describing a resource. It is widely used by data repositories and can be
+found in web pages as meta tags with a DC. prefix, for example:</p>
+<pre><code>&lt;meta name="DC.identifier" content="doi:10.7910/DVN/4GVGAP" /&gt;
+&lt;meta name="DC.type" content="Dataset" /&gt;
+&lt;meta name="DC.title" content="Replication Data for: Soil Biological Indices in Short and Long-Term Experiments in Kenya" /&gt;
+&lt;meta name="DC.date" content="2019-07-08" /&gt;
+&lt;meta name="DC.publisher" content="Harvard Dataverse" /&gt;</code></pre>
+<p>Webpages with DC metadata tags can be indexed by tools such as Google
+Dataset Search</p>
+</div>
+<div class="section level4">
+<h4 id="schema-org-dataset-context">Schema.org <span class="citation">@dataset</span> context<a class="anchor" aria-label="anchor" href="#schema-org-dataset-context"></a></h4>
+<p>Schema.org is a collaborative effort founded by Google, Microsoft,
+Yahoo and Yandex to create structured schemas for the web. The <span class="citation">@dataset</span> type is sub set of schema.org used to
+describe a dataset. Like DCMI terms, it is widely used by data
+repositories and can be found in web pages, normally as inline JSON+LD,
+for example:</p>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+"@context":"http://schema.org",
+"@type":"Dataset",
+"@id":"https://doi.org/10.7910/DVN/4GVGAP",
+"identifier":"https://doi.org/10.7910/DVN/4GVGAP",
+"name":"Replication Data for: Soil Biological Indices in Short and Long-Term Experiments in Kenya"
+&lt;/script&gt;</code></pre>
+</div>
+<div class="section level4">
+<h4 id="datacite-doi-schema">DataCite DOI Schema<a class="anchor" aria-label="anchor" href="#datacite-doi-schema"></a></h4>
+<p>DataCite is the organisation responsible for maintianing Data Domain
+Object Identifiers (DOIs). Every DOI is supported by metadata using the
+DataCite Schema. This schema can be mapped onto DublinCore and
+schema.org.</p>
+</div>
+<div class="section level4">
+<h4 id="cgiar-core-metadata">CGIAR Core Metadata<a class="anchor" aria-label="anchor" href="#cgiar-core-metadata"></a></h4>
+<p>The CGIAR core metadata is based on DublinCore DCMI Metadata Terms,
+but adds additional elements to better meet CGIAR requirements for
+resource discovery.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="minimum-information-schemas">Minimum Information Schemas<a class="anchor" aria-label="anchor" href="#minimum-information-schemas"></a></h3>
+<p>Minimum Information Schemas are specialised metadata schemas which
+aim to provide consistent and deeper description of a resource. We have
+already seen the GLTEN metadata schema which is really a minimum
+information schema to describe a long-term experiment. Another schema
+relevant to long-term experiments is MIAPPE.</p>
+<div class="section level4">
+<h4 id="miappe">MIAPPE<a class="anchor" aria-label="anchor" href="#miappe"></a></h4>
+<p>MIAPPE stands for minimum information about a plant phenotyping
+experiment and is designed to harmonise the description of experimental
+and computed data from field and glass house experiments.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -373,6 +501,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="fair-data.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -381,7 +510,7 @@ any links that you are not going to use.
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="fair-data.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous: Introduction to FAIR</a>
-        <a class="chapter-link float-end" href="organising-data-for-ltes.html" rel="next">Next: organising-data-for-... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="organising-data-for-ltes.html" rel="next">Next: Organising data for... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div> <!-- / div.primary-content.col-xs-12 -->
 <!-- END:   inst/pkgdown/templates/content-instructor.html-->
