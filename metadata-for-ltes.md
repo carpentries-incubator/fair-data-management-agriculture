@@ -6,112 +6,61 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- What is metadata?
+- Why do we use metadata for?
+- What metadata should we collect for LTEs?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Recognise what metadata is.
+- Distinguish different types of metadata.
+- Understand what makes metadata interoperable.
+- Know how to decide what to include in metadata.
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## What is metadata
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+Metadata is data about the data; metadata provides a description of our data. We need metadata to help us understand the data and how to interpret it. Therefore, metadata plays an important role in making our FAIR.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+### Types of metadata
+We can distinguish three types of metadata:
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+__Administrative metadata:__
+Information about a project or resource that are relevant for managing it, for example: principle investigator, project collaborators, contacts, funders and grant details, project data management plan, project period, location, etc. This information is usually assigned to the data before you start collecting, but it can change and be added to, so it is important to keep it up to date!
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+__Descriptive and citation metadata:__
+Information about a dataset that allows other researchers to discover and identify it, for example, authors, abstract, keywords, persistent identifier such as a DOI, licence, related publications, and research outputs.
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+__Structural metadata:__
+Information about how the data was created and how it is structured. For example, experiment design and treatment factors, sampling protocols, analytical protocols, measured variables and observations. For an LTE structural metadata can also include information about the experiment management, for example sowing and harvest dates, pest management, tillage and cultivation practice, fertilizer inputs, and environmental information such as soil properties, and climate. Often the difference between metadata and data can be blurred. Structural metadata should be gathered according to best practices used in your research community.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Descriptive and structural metadata should be added continuously throughout the project.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::: discussion 
 
-## Challenge 1: Can you do it?
+## Identifying Metadata
 
-What is the output of this command?
+For this challenge we'll review the lesson datasets.
+- What types of metadata do they collect?
+- Are they missing key metadata?
+- How consistent are the datasets in their metadata? 
+- How do they do they differ?
+- Do you think the metadata is FAIR?
+:::
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+### Metadata to describe a long-term experiment
 
-:::::::::::::::::::::::: solution 
+Good metadata are crucial for ensuring LTE data is understandable and therefore reusable by other researchers. The type of metadata collected often depends on the context for the data. Administrative and citation metadata are normally common across different datasets and experiments, for example, a field experiment and a lab experiment will both have information about PIs, funding, abstract, keywords, and identifiers. However, the structural metadata will depend on the context for the experiment and the data, for example, soil chemistry data will need different metadata compared to yield data or diease assessment data
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can include figures generated from R Markdown:
-
-
-```r
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-
-<div class="figure" style="text-align: center">
-<img src="fig/metadata-for-ltes-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
-<p class="caption">Sun arise each and every morning</p>
-</div>
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Metadata provides essential context for understanding a dataset
+- To be reusable, metadata should be consistent across datasets of the same type
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
