@@ -6,14 +6,16 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- Why should you share data?
+- Are long-term experiments particularly important to share? 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Explain how sharing data can increase impact of your data and research.
+- Understand how sharing data can increase the return on investment to funders.
+- Understand how sharing data supports scientific integrity. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
