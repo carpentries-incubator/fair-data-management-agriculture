@@ -191,6 +191,8 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#common-spreadsheet-errors">Common Spreadsheet Errors</a></li>
+<li><a href="#excel-is-not-a-database">Excel is not a database</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -257,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Organising data for long-term experiments</h1>
-        <p> Last updated on 2023-02-16 | 
+        <p> Last updated on 2023-02-20 | 
         
         <a href="https://github.com/carpentries-incubator/fair-data-management-agriculture/edit/main/episodes/organising-data-for-ltes.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -296,7 +298,317 @@ in spreadsheet programs.</li>
 </div>
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<hr class="half-width"><div id="keypoints1" class="callout keypoints">
+<hr class="half-width"><p>Tables are a great way of presenting data, and spreadsheet software
+such as Google Sheets and Microsoft Excel are useful programs for making
+tabular datasets. Most researchers are familiar with Excel, it is easy
+to use, flexible, and includes tools for analysing and visualising data.
+Excel’s flexibility gives us a lot of freedom to organise data, but this
+can lead to bad practices and data which are difficult to reuse.</p>
+<p>In the worst case Excel’s default behavior may corrupt our data. For
+example consider a value like 1/12, or SEPT1. In both examples Excel
+will, by default, convert these values to dates, even if they are not
+intended by the user to be dates. In the example of SEPT1, this was a
+recognised name for a human gene which has since been renamed to SEPTIN1
+specifically to avoid this type of data handling error when using Excel
+(<a href="https://doi.org/10.1038/s41588-020-0669-3" class="external-link">https://doi.org/10.1038/s41588-020-0669-3</a>).</p>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="bad-tables-in-excel" class="callout-inner">
+<h3 class="callout-title">Bad tables in Excel<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
+<div class="callout-content">
+<p>Using the data tables in the lesson Excel files, review them to
+identify any problems with that would make it difficult to reuse the
+data</p>
+<div class="hints">
+<ul><li>What do you find confusing about the data?</li>
+<li>Do you have all the information you need to use the data?</li>
+<li>Could you successfully combine the data?</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Problems with the Broadbalk dataset
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal"><li>Plot names would be converted to dates in Excel</li>
+<li>Treatments, FYM treatments are encoded using colour, and they key is
+not obvious</li>
+<li>Yield does not provide units</li>
+<li>Some yield values are coloured red, but not clear why</li>
+</ol><div class="section level3">
+<h3 id="problems-with-the-sidada-dataset">Problems with the Sidada dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-sidada-dataset"></a></h3>
+<ol style="list-style-type: decimal"><li>Multi-row column headings</li>
+<li>Matrix style layout</li>
+<li>Not even sure what the data is for</li>
+<li>No metadata</li>
+</ol></div>
+<div class="section level3">
+<h3 id="problems-with-the-chitedze-dataset">Problems with the Chitedze dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-chitedze-dataset"></a></h3>
+<ol style="list-style-type: decimal"><li>Pretty layout – try saving as CSV, mix of data and metadata on one
+sheet</li>
+<li>Headings span multiple columns</li>
+<li>Use of undefined codes</li>
+<li>Missing data flagged with -9999</li>
+</ol></div>
+<div class="section level3">
+<h3 id="problems-with-the-embu-dataset">Problems with the Embu dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-embu-dataset"></a></h3>
+<ol style="list-style-type: decimal"><li>Inconsistent use of treatment names – first 3 years have a space
+between OM and N, OM and N rates are blank when not applied, but after
+are 0. Yield has missing values which are flagged * years 1-3 and N/A
+years 4-10</li>
+<li>Yield combines units and value, should be separate</li>
+<li>Yield has different units – bushels/acre and t/ha</li>
+</ol></div>
+<div class="section level3">
+<h3 id="can-these-datasets-easily-be-combined-and-reused">Can these datasets easily be combined and reused<a class="anchor" aria-label="anchor" href="#can-these-datasets-easily-be-combined-and-reused"></a></h3>
+<ul><li>No, these datasets cannot easily be combined.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="common-spreadsheet-errors"><h2 class="section-heading">Common Spreadsheet Errors<a class="anchor" aria-label="anchor" href="#common-spreadsheet-errors"></a>
+</h2>
+<hr class="half-width"><p>There are several well known errors researchers make when using
+Excel. This section provides an overview of them.</p>
+<div class="section level3">
+<h3 id="multiple-tables-in-one-spreadsheet">1. Multiple tables in one spreadsheet<a class="anchor" aria-label="anchor" href="#multiple-tables-in-one-spreadsheet"></a></h3>
+<p>The Broadbalk example dataset has its data organised into separate
+tables for each year in one worksheet. While this view makes it visually
+easy for a human to view all the data on one screen, it makes it much
+harder for a computer to process the data. The computer does not
+recognise row 6 contains is for five different tears and column C
+includes both treatment codes, sowing and harvest dates for two differet
+years. If we wanted to calculate mean yields per treatment we would need
+to reorganise the data or manually reference cells in an Excel
+formula.</p>
+<figure><img src="fig/multiple-tables-bad-example.png" alt="Example of bad Excel practice using multiple tables in one Excel worksheet." class="figure mx-auto d-block"><figcaption>Example of multiples tables in one spreadsheet</figcaption></figure></div>
+<div class="section level3">
+<h3 id="using-multiple-tabs">2. Using multiple tabs<a class="anchor" aria-label="anchor" href="#using-multiple-tabs"></a></h3>
+<p>Creating multiple tabs can improve data organisation by helping to
+separate different pieces of information. For example, in the Embu
+example dataset, the yield data is in a separate worksheet tab to the
+experiment information. However, with Excel, the computer will not be
+able to see connections which might exist between data in different
+tabs, for example, in the Embu example, the yield data is split into a
+separate worksheet per year, and while a human can see these data are
+related the computer cannot. Furthermore, key information, namely the
+year of the experiment is encoded in the worksheet name only. As with
+placing data in multiple tables in the same worksheet, placing data in
+multiple worksheets means you must either reorganise the data or write
+more data handling scripts before you can use the data.</p>
+<p>Using multiple worksheet tab can introduce inconsistencies in the way
+tables are organised. It is always better to keep related together in
+one table. Keeping related data in one table may result in a large
+table, but Excel does provide tools to make it easier to navigate the
+data such as freezing column headings and column filters.</p>
+<p>If our spreasheet has more than a few worksheet tabs, and you need to
+scroll through multiple tabs, it can become difficult and unwieldy to
+keep track of all the information.</p>
+</div>
+<div class="section level3">
+<h3 id="zeros-blanks-and-null-values">3. Zeros, blanks and null values<a class="anchor" aria-label="anchor" href="#zeros-blanks-and-null-values"></a></h3>
+<p>A cell with a value 0 is different to a blank cell. To Excel, a blank
+cell means no data, whereas zero is data. Zero means you looked for
+something but did not observe it while blank is an absence of data.
+Excel and statistical programs may misrepresent blanks that should be
+zeros in subsequent analyses</p>
+<p>Very often we’ll encounter datasets where missing data is encoded by
+a specific value, for example, -999, 999, NA, or *. Using values to
+encode missing data can cause problems. For example a statistical
+program will not recognise a numeric code for missing data from real
+numeric data, and a non-numeric character may cause the values to be
+treated as text rather than numbers. Therefore it is generally better to
+leave missing values as blank, but if they are encoded, the table
+metadata must document this, and the code must be used consistently. One
+key exception to this rule is if you plan to use the statistical
+software R, where the value NA can be used to indicate missing
+values.</p>
+<p>Sometimes we might know why a value is missing, and this might be for
+one of several reasons. For example, in an LTE, missing data might be
+because the crop failed to establish, it was destroyed by animal pests,
+or it was destroyed by disease. Rather than encoding this information in
+the column recording yield, it is better to add a separate column
+recording the reason why data is missing.</p>
+</div>
+<div class="section level3">
+<h3 id="using-formatting-to-convey-information">4. Using formatting to convey information<a class="anchor" aria-label="anchor" href="#using-formatting-to-convey-information"></a></h3>
+<p>Formatting in Excel can include using different background colours
+for cells, using different colours for text, leaving blank rows or
+columns between data, or using border shading. For a human, formatting
+can be used to both make tables more readable and to convey information.
+Formatting to make a table more readable, for example, shading column
+headings, is acceptable, but using formatting to convey information must
+be avoided. Unlike a human, a computer cannot use formatting, and if the
+data is saved as a text format such as CSV or TAB, the information
+contained in the formatting is lost.</p>
+<p>Rather than using formatting to convey information, the information
+should be encoded as a new field. For example, in the Broadbalk dataset,
+green is used to identify treatments with FYM, and red text to indicate
+a suspicious value, these pieced of information should be added as
+separate columns:</p>
+<p>!(fig/formatting-example-bad.png){alt=‘Example of using formatting to
+convey additional information.’}</p>
+<p>becomes</p>
+<p>!(fig/formatting-example-god.png){alt=‘Example replacing formatting
+with additional columns to convey usable information.’}</p>
+</div>
+<div class="section level3">
+<h3 id="storing-more-than-one-piece-of-information-in-a-cell">5. Storing more than one piece of information in a cell<a class="anchor" aria-label="anchor" href="#storing-more-than-one-piece-of-information-in-a-cell"></a></h3>
+<p>Using formatting to convey information is an example of storing more
+than one piece of information in a cell, you have both the cell value
+and the information encoded by the formatting. In the Sidada example, we
+can see treatment seems to encode information about several different
+treatments. This makes it difficult, for example, to select records
+based on a single factor level, for example if we wanted to identify
+plots with the N+ treatment rather than filtering on an exact term we
+must use a fuzzy search and select plots containing or like N+. Equally
+we cannot easily order rows on this value.</p>
+<p>In the Embu dataset, yield data for some years combines both the
+yield value and yield units. This problematic for analysis as a computer
+would treat the value as text instead of as a number. The unit
+information should either be stored in a separate column, or as metadata
+for the yield value column description.</p>
+</div>
+<div class="section level3">
+<h3 id="inconsistency-in-values-used">6. Inconsistency in values used<a class="anchor" aria-label="anchor" href="#inconsistency-in-values-used"></a></h3>
+<p>Being inconsistent with value names can cause problems. For example,
+in the Embu data, <code>C. calothyrsus cuttings</code>,
+<code>Calliandra cuttings</code>, and <code>Calliandra cuttings</code>
+are used interchangeably and, as humans we can see these terms, in the
+context of the dataset, mean the same thing. A compuer, however, would
+treat these as different values.</p>
+</div>
+<div class="section level3">
+<h3 id="using-problematic-field-names">7. Using problematic field names<a class="anchor" aria-label="anchor" href="#using-problematic-field-names"></a></h3>
+<p>Column names should be descriptive of the data they hold. A brief
+descriptive name should be preferred as it removes ambiguity and better
+conveys the meaning of the data. You can provide more detail about the
+column data in a separate metadata file. Abbreviations may make sense
+now, but will they make sense in 6 months time or to other researchers
+unfamiliar with your naming convention? Abbreviations are best used only
+when they widely accepted within a research community.</p>
+<p>When naming columns be careful to avoid white spaces, starting with
+numbers, or special characters. white space, tabs and commas can all be
+interpreted as column delimiters, and some software packages won’t
+accept column names with numbers. Underscores are a better alternative
+to white space. CamelCase (for example OrganicManureTreatment), can also
+be used, but may cause problems with software that treats column
+headings as case insensitive.</p>
+<table class="table"><thead><tr class="header"><th>Good Name</th>
+<th>Avoid Name</th>
+</tr></thead><tbody><tr class="odd"><td>yield_tha</td>
+<td>yield (t ha-1)</td>
+</tr><tr class="even"><td>organic_manure_type</td>
+<td>OM type</td>
+</tr><tr class="odd"><td>treatment_label</td>
+<td>treatment label</td>
+</tr><tr class="even"><td>year_5</td>
+<td>5th year</td>
+</tr></tbody></table></div>
+<div class="section level3">
+<h3 id="multi-row-column-names-and-merge-cells">8. multi-row column names and merge cells<a class="anchor" aria-label="anchor" href="#multi-row-column-names-and-merge-cells"></a></h3>
+<p>Using multi-row column headings can be useful mechanism for grouping
+related columns together in a hierarchical naming structure. For
+example, in the Sidada dataset column headings are across two rows, with
+cells merged to illustrate the grouped columns. while this works for a
+human a computer will not recognise this structure, and interpret the
+second row as data. Merged cells may also be unmerged to create nameless
+columns, for example, we can see this behavior if we export the Sidada
+data as CSV:</p>
+</div>
+</section><section id="excel-is-not-a-database"><h2 class="section-heading">Excel is not a database<a class="anchor" aria-label="anchor" href="#excel-is-not-a-database"></a>
+</h2>
+<hr class="half-width"><p>We commonly use Excel to manage data, but it is important to remember
+Excel is not a database management system. There are several key
+differences between how Excel, as a spreadsheet program, manages data
+compared to a database. How does data storage differ between
+spreadsheets and databases?</p>
+<div class="section level3">
+<h3 id="unit-of-data">Unit of data<a class="anchor" aria-label="anchor" href="#unit-of-data"></a></h3>
+<p>In a spreadsheet the unit of data is a cell, in a database it is a
+table record. If we create a table in Excel, the value in one column is
+independent from the value in the neighbouring cells. As a human we can
+see there is a relationship between cells in a row, but Excel does not
+share our concept of a table and will allow you to sort one column
+independently of other columns. Excel does not have a formal table
+structure, you can draw a table layout, but you can move the table
+around a worksheet, and place other information around it. In a database
+a table exists as a formal data structure and its unit of data is a row.
+A table can contain only data in the columns define for it and nothing
+else and columns cannot be sorted independently of each other.</p>
+</div>
+<div class="section level3">
+<h3 id="column-data-types">Column data types<a class="anchor" aria-label="anchor" href="#column-data-types"></a></h3>
+<p>Database table columns are typed, in excel they are not. This means
+in a database table you must define the data type for each column, for
+example <code>text</code>, <code>integer</code>, <code>numeric</code>,
+<code>date</code>, or <code>datetime</code> (the exact datatypes will
+vary between different database systems). Therefore a colmnn defined as
+integer can only store integer values, it cannot store decimals, text or
+dates. In Excel you can add any type of data into a cell. Databases
+therefore provide very robust rules for quality controlling your data
+compared to Excel.</p>
+</div>
+<div class="section level3">
+<h3 id="databases-define-formal-relationships-between-tables">Databases define formal relationships between tables<a class="anchor" aria-label="anchor" href="#databases-define-formal-relationships-between-tables"></a></h3>
+<p>A database can define formal relationships between tables using key
+columns. This is a very powerful feature of <em>relational</em>
+databases which allow for complex data structures to be defined. An
+important use of relationships is to reduce data duplication and
+increase the integrity of the data. For example, the Chitedze dataset
+has eight different treatments. These treatments can be defined in one
+small table, and the unique treatment number copied into the yield data
+table to create a relationship. None of the information about treatments
+needs to be duplicated in the yield data table, and a rule known as
+<em>referential integrity</em> means only ID values from the treatments
+table can be used in the yield data table.</p>
+</div>
+<div class="section level3">
+<h3 id="databases-live-on-database-servers">Databases live on database servers<a class="anchor" aria-label="anchor" href="#databases-live-on-database-servers"></a></h3>
+<p>Relational databases are usually hosted on a database server (SQLite
+and MS Access are two exceptions being file based programs). This brings
+several security features not available in Excel, including: -
+multi-user access - backup and recovery - permissioned access -
+multi-user access - audit logs</p>
+</div>
+<div class="section level3">
+<h3 id="databases-are-transactional">Databases are transactional<a class="anchor" aria-label="anchor" href="#databases-are-transactional"></a></h3>
+<p>Every update to a database happens inside a transaction which has a
+start and an end. This means data is only saved into the database once
+the transaction successful completes, if something goes wrong, or you
+forget to finish, the transaction will rollback to the databases
+original state. This is a critical feature which helps to maintain the
+health of your data.</p>
+</div>
+<div class="section level3">
+<h3 id="databases-are-not-easy-to-copy">Databases are not easy to copy<a class="anchor" aria-label="anchor" href="#databases-are-not-easy-to-copy"></a></h3>
+<p>Compared to Excel, it is very difficult to make multiple copies of a
+database. With Excel it is very easy to make multiple copies of a file
+which, unless a robust naming and versioning system is in place, can
+lead to confusion.</p>
+</div>
+<div class="section level3">
+<h3 id="databases-are-harder-to-use">Databases are harder to use<a class="anchor" aria-label="anchor" href="#databases-are-harder-to-use"></a></h3>
+<p>While databases clearly have many advantages over Excel for managing
+data, this comes at a cost. To use a database effectively you need a
+good understanding of database design principles and SQL, the language
+used to interact with a database.</p>
+<p>Compare between datasets 1. Treatment factors and standard experiment
+management can be interchangeable between. For example, in application
+of N is a treatment for Broadbalk and Embu, but not in Chitedze. 2.
+Collect similar information, for example soil properties but presented
+differently</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -304,21 +616,15 @@ in spreadsheet programs.</li>
 <h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></div>
+<ul><li>
+</li></ul></div>
 </div>
 </div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="metadata-for-ltes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -349,7 +655,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.11.6)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.6" class="external-link">sandpaper (0.11.6)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.4.3" class="external-link">pegboard (0.4.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.14" class="external-link">varnish (0.2.14)</a>.</p>
 			</div>
@@ -371,9 +677,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/fair-data-management-agriculture/organising-data-for-ltes.html",
   "identifier": "https://carpentries-incubator.github.io/fair-data-management-agriculture/organising-data-for-ltes.html",
-  "dateCreated": "2023-02-16",
-  "dateModified": "2023-02-16",
-  "datePublished": "2023-02-16"
+  "dateCreated": "2023-02-20",
+  "dateModified": "2023-02-20",
+  "datePublished": "2023-02-20"
 }
 
   </script><script>
