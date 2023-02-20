@@ -44,12 +44,19 @@ Descriptive and structural metadata should be added continuously throughout the 
 
 ## Identifying Metadata
 
-For this challenge we'll review the lesson datasets.
+Review the lesson datasets.
 - What types of metadata do they collect?
 - Are they missing key metadata?
 - How consistent are the datasets in their metadata? 
 - How do they do they differ?
 - Do you think the metadata is FAIR?
+
+:::
+
+::: INSTRUCTOR
+
+Recommended participants work in groups to discuss metadata they would include. Participants can list out different metadata and present their thoughts to the wider lesson group. 
+
 :::
 
 ### Metadata to describe a long-term experiment
@@ -61,6 +68,12 @@ Good metadata are crucial for ensuring LTE data is understandable and therefore 
 ## Challenge 2.1. Metadata to describe a long-term experiment
 
 Make a list of the different metadata you should collect to describe your experiment (we’ll look at the data later). 
+
+:::
+
+::: INSTRUCTOR
+
+Recommended participants work in groups to discuss metadata they would include. Participants can list out different metadata and present their thoughts to the wider lesson group. 
 
 :::
 
