@@ -179,7 +179,9 @@ Compare between datasets
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- 
+- Humans and computers can interpret data in Excel differently.
+- Be aware of common problems using Excel for managing data.
+- Excel is not a database.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
