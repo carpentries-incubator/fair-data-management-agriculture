@@ -200,6 +200,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#data-repository-features">Data Repository features</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -257,7 +258,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>publishing-data-for-ltes</h1>
-        <p> Last updated on 2023-02-21 | 
+        <p> Last updated on 2023-02-22 | 
         
         <a href="https://github.com/carpentries-incubator/fair-data-management-agriculture/edit/main/episodes/publishing-data-for-ltes.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -296,7 +297,113 @@ data.</li>
 </div>
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<hr class="half-width"><div id="keypoints1" class="callout keypoints">
+<hr class="half-width"><p>A data repository is an storage infrastructure designed to preserve
+research data and make findable and accessible to other researchers.</p>
+</section><section id="data-repository-features"><h2 class="section-heading">Data Repository features<a class="anchor" aria-label="anchor" href="#data-repository-features"></a>
+</h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="features-to-support-fair-data">Features to support FAIR data<a class="anchor" aria-label="anchor" href="#features-to-support-fair-data"></a></h3>
+<p>To support FAIR data, a data repository must provide a core set of
+features including: - Exposing machine readable metadata which can be
+indexed by services such as Google Dataset Search. - Infrastructure to
+capture rich and relevant metadata. - Ensuring access to metadata even
+if access to data is not available. - Allocation of persistent and
+citable identifiers (e.g. DOIs) to datasets.</p>
+</div>
+<div class="section level3">
+<h3 id="dataset-dois">Dataset DOIs<a class="anchor" aria-label="anchor" href="#dataset-dois"></a></h3>
+<p>DOI stands for Domain Object Identifier and is a type of Persistent
+Identifier managed by DataCite. DataCite is a global non-profit
+organisation which manages the allocation of DOIs. A DOI consists of an
+identifier, a resolution URL and metadata. The resolution URL is the
+place on the internet where the data can be accessed. The two key
+advantages of a DOI compared to a simple web address are: 1. The DOI is
+permanent, DataCite guarantees it will resolve to a metadata landing
+page, even if the link to the data is broken. 2. Metadata to describe
+the dataset is always available, even if the dataset is not.</p>
+</div>
+<div class="section level3">
+<h3 id="data-versioning">Data versioning<a class="anchor" aria-label="anchor" href="#data-versioning"></a></h3>
+<p>Datasets published with a DOI are immutable, meaning you cannot alter
+the data. For example, making a correction to a published dataset or
+appending new records means the data has changed and must therefore be
+republished with a new DataCite DOI. This is an important concept for
+supporting reproducible science as it guarantees all users of a dataset
+will use exactly the same data over time.</p>
+<p>DataCite DOIs provide a mechanism for both versioning datasets and
+identifying relationships between two datasets, in this case stating
+Dataset X is a newer version of Dataset Y.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="what-about-sites-like-github-or-dropbox" class="callout-inner">
+<h3 class="callout-title">What about sites like Github or Dropbox<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>Github is a version control platform original developed for code
+management. Dropbox and similar services are cloud file hosting
+services. Neither type of service provides repository features such as
+PID, and indexed and findable metadata.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="features-to-improve-research-experience">Features to improve research experience<a class="anchor" aria-label="anchor" href="#features-to-improve-research-experience"></a></h3>
+<p>Data repositories often provide other features to improve researcher
+experience including: - Embargo periods, enabling dataset discovery, but
+not immediate access. - Reporting metrics such as views, downloads,
+citations and other interactions.</p>
+</div>
+<div class="section level3">
+<h3 id="specialist-vs-generalist-repositories">Specialist vs Generalist repositories<a class="anchor" aria-label="anchor" href="#specialist-vs-generalist-repositories"></a></h3>
+<p>In several domains specialist data repositories have been developed
+to better serve particular research communities and the types of data
+they generate. Many research institutes will have their own data
+repositories. Institute repositories are normally generalist but may
+have local policies and support to improve data submission quality. The
+following table compares specialist, generalist and institute
+repositories:</p>
+<table class="table"><colgroup><col width="19%"><col width="27%"><col width="27%"><col width="25%"></colgroup><thead><tr class="header"><th>Feature</th>
+<th>Specialist</th>
+<th>Generalist</th>
+<th>Institute</th>
+</tr></thead><tbody><tr class="odd"><td>Identifier</td>
+<td>Can be either a unique repository accession number or DataCite
+DOI</td>
+<td>DataCite DOI</td>
+<td>DataCite DOI</td>
+</tr><tr class="even"><td>Metadata</td>
+<td>Will define detailed metadata to describe the type of data.</td>
+<td>Administrative metadata based on DataCite schema.</td>
+<td>Administrative metadata based on DataCite schema, but institutes may
+have local policies to improve metadata quality</td>
+</tr><tr class="odd"><td>Data format</td>
+<td>May proscribe the data format using an open community standard</td>
+<td>No special rules on data format</td>
+<td>Institutes may have local policies on data formats.</td>
+</tr><tr class="even"><td>Support</td>
+<td>May provide dedicated data curation support for submission
+processes</td>
+<td>None usually provided</td>
+<td>Institute may have dedicated research data stewards to support data
+publishing.</td>
+</tr><tr class="odd"><td>Data Quality Control</td>
+<td>Often have strict requirements</td>
+<td>Minimal</td>
+<td>Depends on local policy</td>
+</tr><tr class="even"><td>Relationship to other repository data</td>
+<td>Good</td>
+<td>variable</td>
+<td>Aligned to institute research areas</td>
+</tr><tr class="odd"><td>Tools integration</td>
+<td>May feed directly into analytical pipelines for processing the
+repostory data types</td>
+<td>None</td>
+<td>Some open source repositories (CKAN, DataVerse) support cross
+dataset querying for similarly structured tabular data.</td>
+</tr></tbody></table><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -319,6 +426,7 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="organising-data-for-ltes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -371,9 +479,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries-incubator.github.io/fair-data-management-agriculture/publishing-data-for-ltes.html",
   "identifier": "https://carpentries-incubator.github.io/fair-data-management-agriculture/publishing-data-for-ltes.html",
-  "dateCreated": "2023-02-21",
-  "dateModified": "2023-02-21",
-  "datePublished": "2023-02-21"
+  "dateCreated": "2023-02-22",
+  "dateModified": "2023-02-22",
+  "datePublished": "2023-02-22"
 }
 
   </script><script>
