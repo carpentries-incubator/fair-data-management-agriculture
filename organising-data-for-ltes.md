@@ -85,7 +85,7 @@ Creating multiple tabs can improve data organisation by helping to separate diff
 
 Using multiple worksheet tab can introduce inconsistencies in the way tables are organised. It is always better to keep related together in one table. Keeping related data in one table may result in a large table, but Excel does provide tools to make it easier to navigate the data such as freezing column headings and column filters.  
 
-If our spreasheet has more than a few worksheet tabs, and you need to scroll through multiple tabs, it can become difficult and unwieldy to keep track of all the information.
+If our spreadsheet has more than a few worksheet tabs, and you need to scroll through multiple tabs, it can become difficult and unwieldy to keep track of all the information.
 
 ### 3. Zeros, blanks and null values
 
@@ -101,11 +101,11 @@ Formatting in Excel can include using different background colours for cells, us
 
 Rather than using formatting to convey information, the information should be encoded as a new field. For example, in the Broadbalk dataset, green is used to identify treatments with FYM, and red text to indicate a suspicious value, these pieced of information should be added as separate columns:
 
-!(fig/formatting-example-bad.png){alt='Example of using formatting to convey additional information.'}
+![](fig/formatting-example-bad.png){alt='Example of using formatting to convey additional information.'}
 
 becomes
 
-!(fig/formatting-example-god.png){alt='Example replacing formatting with additional columns to convey usable information.'}
+![](fig/formatting-example-good.png){alt='Example replacing formatting with additional columns to convey usable information.'}
 
 ### 5. Storing more than one piece of information in a cell
 
