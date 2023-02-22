@@ -39,14 +39,6 @@ DOI stands for Domain Object Identifier and is a type of Persistent Identifier m
 1. The DOI is permanent, DataCite guarantees it will resolve to a metadata landing page, even if the link to the data is broken. 
 2. Metadata to describe the dataset is always available, even if the dataset is not.
 
-:::
-
-:::::: challenge
-
-::::::
-
-:::
-
 ### Data versioning
 
 Datasets published with a DOI are immutable, meaning you cannot alter the data. For example, making a correction to a published dataset or appending new records means the data has changed and must therefore be republished with a new DataCite DOI. This is an important concept for supporting reproducible science as it guarantees all users of a dataset will use exactly the same data over time. 
@@ -90,4 +82,3 @@ Tools integration | May feed directly into analytical pipelines for processing t
 - Run `sandpaper::build_lesson()` to preview your lesson locally
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
