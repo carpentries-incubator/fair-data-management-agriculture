@@ -31,7 +31,7 @@ In the worst case Excel's default behavior may corrupt our data. For example con
 
 Using the data tables in the lesson Excel files, review them to identify any problems with that would make it difficult to reuse the data
 
-:::::: hints
+:::::: hint
 
 - What do you find confusing about the data?
 - Do you have all the information you need to use the data? 
