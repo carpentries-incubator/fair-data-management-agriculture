@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/AUTHORS.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/CITATION.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/FUNDING.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/LICENSE.html</loc>
@@ -19,7 +28,16 @@
     <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/index.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/instructor/AUTHORS.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/instructor/CITATION.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/instructor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/instructor/FUNDING.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/fair-data-management-agriculture/instructor/LICENSE.html</loc>
