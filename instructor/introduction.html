@@ -287,8 +287,8 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Understand the purpose of this lesson.</li>
-<li>Explain what l-term agricultural are and why good data management is
-important.</li>
+<li>Explain why good data management is important for long-term
+agricultural experiments.</li>
 </ul></div>
 </div>
 </div>
@@ -296,19 +296,41 @@ important.</li>
 </div>
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<hr class="half-width"><p>This lesson is aimed at long-term agricultural experiment (LTE)
-managers and researchers interested in using long-term agricultural
-experiments, who want to apply open science and good research data
-management practices to their LTE data.</p>
+<hr class="half-width"><div class="section level3">
+<h3 id="who-is-this-lesson-for">Who is this lesson for?<a class="anchor" aria-label="anchor" href="#who-is-this-lesson-for"></a></h3>
+<p>This lesson is aimed at long-term agricultural experiment (LTE)
+managers, and researchers interested in using long-term agricultural
+experiment data, who want to apply open science and good research data
+management practices to their LTE data. While the target audience for
+this lesson is LTE managers and researchers, the lesson covers many data
+management and FAIR data topics relevant to a broader audience</p>
 <p>The lesson is split into five episodes:</p>
-<ol style="list-style-type: decimal"><li><p>Data Sharing</p></li>
-<li><p>FAIR Principles</p></li>
-<li><p>Metadata for LTEs</p></li>
-<li><p>Organising your LTE data</p></li>
-<li><p>Publishing your LTE data</p></li>
-</ol><div class="section level3">
+<ol style="list-style-type: decimal"><li>Why should we share LTE data?</li>
+<li>Introduction to FAIR Principles for LTE data</li>
+<li>Metadata for LTEs</li>
+<li>Organising LTE data</li>
+<li>Publishing LTE data</li>
+</ol><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>The lesson covers many data management and FAIR data topics relevant
+to a broader audience, but the focus here, including provided datasets
+is on LTE managers and researchers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
 <h3 id="what-are-long-term-agricultural-experiments">What are long-term agricultural experiments?<a class="anchor" aria-label="anchor" href="#what-are-long-term-agricultural-experiments"></a></h3>
-<p>Long-term agricultural experiments are multi-year field experiments
+<p>Long-term agricultural experiments are multi-year field experiments,
 testing a range of different treatments to assess the sustainability of
 crop production and soil health over time (<a href="https://doi.org/10.1111/ejss.12521" class="external-link">Johnston &amp; Poulton,
 2018</a>). Field experiments are considered long-term if they have at
@@ -318,15 +340,123 @@ wheat</a>, located at Rothamsted, UK, and has been running for 180
 years. Globally there are many hundreds of LTEs. The <a href="https://glten.org/" class="external-link">Global Long-Term agricultural Experiments
 Network - GLTEN</a> lists over 250 experiments, while the German <a href="https://lte.bonares.de/" class="external-link">BonaRes</a> repository contains
 information for over 450 LTEs in Europe.</p>
+<p>LTEs consist of multiple experiment plots, each receiving a different
+combination of treatments over time. Each plot receives the same set of
+treatments and this can result in very different soil environments, with
+gradients of soil pH, nutrient availability, or soil organic matter
+arising over time.</p>
+<p>Experimental treatments tested on LTEs are very diverse and can range
+from whole system comparisons, such as organic vs inorganic agriculture,
+cropping system comparisons such as monocrop vs different crop
+rotations, and individual management practices such as nutrient inputs,
+crop residue management, organic amendments, and tillage and cultivation
+practices.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>Review some of experiments listed on the <a href="https://glten.org/" class="external-link">Global Long-Term agricultural Experiments
+Network - GLTEN</a> metadata portal and have a look at the diversity of
+different treatments used.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
-<h3 id="why-are-long-term-agricultural-experiments-important">Why are long-term agricultural experiments important?<a class="anchor" aria-label="anchor" href="#why-are-long-term-agricultural-experiments-important"></a></h3>
+<h3 id="why-are-ltes-and-their-data-important">Why are LTEs and their data important?<a class="anchor" aria-label="anchor" href="#why-are-ltes-and-their-data-important"></a></h3>
 <p>LTEs are important sources of long-term data on crops and soils which
 can be used to assess the sustainability of different agricultural
-practices and farming systems overtime. Today, as society attempts to
-address global challenges faced by climate change and food security,
-this data can provide critical insights and knowledge to help us adapt
-to and address these challenges.</p>
+practices and farming systems overtime. Often the trends and processes
+observed in LTEs can take many years, even decades to manifest, and this
+data cannot easily be reproduced. LTEs are also expensive to maintain,
+it can take several years before useful data is generated, meaning
+research organisations and funders have to commit to long-term
+investments.</p>
+<p>Today, as society attempts to address global challenges faced by
+climate change and food security, this data can provide critical
+insights and knowledge to help us adapt to and address these
+challenges.</p>
+</div>
+<div class="section level3">
+<h3 id="why-do-we-need-good-data-management-for-ltes">Why do we need good data management for LTEs<a class="anchor" aria-label="anchor" href="#why-do-we-need-good-data-management-for-ltes"></a></h3>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
+<div class="callout-content">
+<p>Working in groups, identify reasons why good research data management
+should be a critical activity for Long-term Agricultural
+Experiments.</p>
+<p>Record your reasons to share with the other participants.</p>
+</div>
+</div>
+</div>
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div class="accordion-body">
+<p>Split the participants into groups and ask them to list and record
+reasons. After a few minutes ask each group to share a reason.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Very often LTEs will span several generations of researchers,
+therefore good data management is critically important to ensure the
+data created by one generation of researchers is usable by the next
+generation. Good research data management is necessary to maintain the
+continuity and the interpretability of LTE data over time. Data
+management for LTEs needs to think more broadly about the information
+necessary to understand an LTE. Data managers need to consider not only
+the data itself but how the data is created, for example are sampling
+and analytical methods the same over time, and if not does this affect
+the interpretation of the data. LTE data managers also need to consider
+the experiment history and the decisions made that affect the
+experiment, whether it is a change in management practices, crop
+varieties, or treatments. Together this information, or metadata, can be
+critical for the correct interpretation of the data.</p>
+<p>LTE data managers must also ensure LTE data is both secure and
+remains accessible overtime. LTE data needs to be kept stored in
+accessible storage using accessible and open data formats. Accessible
+can also mean the how the data is described and this can change
+overtime. For example, Rothamsted’s Broadbalk experiment originally
+recorded grain yields as bushels, then lbs acre<sup>-1</sup> and today
+as t ha<sup>-1</sup>. Each change necessitates a conversion which must
+be documented to ensure ongoing trust in the data provenance.</p>
+<p>For a more detailed overview of some of the data management
+challenges facing long-term experiments, based on the Rothamsted
+Long-term experiments see <a href="https://doi.org/10.1007/978-3-031-13276-6_7" class="external-link">Ostler et al,
+2023</a>.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<p>Good research data management for LTE data matters because: - LTE
+data is costly to produce - LTE data is unique and cannot be reproduced
+- LTE data takes many years to generate - Good RDM is necessary to
+ensure the continuity of data over time - Good RDM is necessary to
+ensure the accessibility of data over time - Good RDM is necessary to
+ensure the usability and interpretability of data over time</p>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
