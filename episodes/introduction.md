@@ -13,7 +13,7 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Understand the purpose of this lesson.
-- Explain what l-term agricultural are and why good data management is important. 
+- Explain what long-term agricultural are and why good data management is important. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
