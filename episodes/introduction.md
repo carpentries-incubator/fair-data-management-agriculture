@@ -26,6 +26,7 @@ The lesson is split into five episodes:
 1. Data Sharing
 2. FAIR Principles
 3. Metadata for LTEs
+
 4. Organising your LTE data
 5. Publishing your LTE data
 
