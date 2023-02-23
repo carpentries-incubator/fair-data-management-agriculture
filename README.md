@@ -4,7 +4,7 @@
 
 The motivation for developing this lesson was provided by a BBSRC award to deliver training on data management, experimental design, and statistical analysis for managers of long-term agricultural experiments. The training was delivered in Nairobi, Kenya in February/March 2023. This lesson presents the material used for the research data management component of the training, and is provided here primarily as a general resource for researches in the long-term experiments community.  
 
-The lesson is indebted to existing Carpentries and has adapted material from both (FAIR in (biological) practice)[https://carpentries-incubator.github.io/fair-bio-practice/], and (Ecology Workshop)[https://datacarpentry.org/ecology-workshop/] episodes.
+The lesson is indebted to existing Carpentries and has adapted material from both [FAIR in (biological practice)](https://carpentries-incubator.github.io/fair-bio-practice/), and [Ecology Workshop](https://datacarpentry.org/ecology-workshop/) episodes.
 
 ## Contributing
 
@@ -29,7 +29,7 @@ Current authors/maintainers of this lesson are
 
 ## Authors
 
-A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
+A list of contributors to the lesson can be found in [AUTHORS](AUTHORS.md)
 
 ## Acknowledgements
 
@@ -39,11 +39,11 @@ Zieliński T, Romanowski A, et al, "FAIR in (biological) practice", 2022, https:
 
 ## Citation
 
-To cite this lesson, please consult with [CITATION](CITATION)
+To cite this lesson, please consult with [citation guidance](CITATION.md)
 
 ## Funding
 
-Development of this lesson was initiated by BBSRC funding [FUNDING](FUNDING) 
+Development of this lesson was initiated by [BBSRC funding](FUNDING.md) 
 
 [lesson-example]: https://carpentries.github.io/lesson-example
 [cdh]: https://cdh.carpentries.org
