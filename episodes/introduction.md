@@ -73,7 +73,7 @@ Split the participants into groups and ask them to list and record reasons. Afte
 
 :::
 
-Very often LTEs will span several generations of researchers, therefore good data management is critically important to ensure the data created by one generation of researchers is usable by the next generation. Good research data management is necessary to maintain the continuity and the interpretability of LTE data over time. Data management for LTEs needs to think more broadly about the information necessary to understand an LTE. Data managers need to consider not only the data itself but how the data is created, for example are sampling and analytical methods the same over time, and if not does this affect the interpretation of the data. LTE data managers also need to consider the experiment history and the decisions made that affect the experiment, whether it is a change in management practices, crop varieties, or treatments. Together this information, or metadata, can be critical for the correct interpretation of the data.
+Very often LTEs will span several generations of researchers, therefore good data management is critically important to ensure the data created by one generation of researchers is usable by the next generation. Good research data management is necessary to maintain the continuity and the interpretation of LTE data over time. Data management for LTEs needs to think more broadly about the information necessary to understand an LTE. Data managers need to consider not only the data itself but how the data is created, for example are sampling and analytical methods the same over time, and if not does this affect the interpretation of the data. LTE data managers also need to consider the experiment history and the decisions made that affect the experiment, whether it is a change in management practices, crop varieties, or treatments. Together this information, or metadata, can be critical for the correct interpretation of the data.
 
 LTE data managers must also ensure LTE data is both secure and remains accessible overtime. LTE data needs to be kept stored in accessible storage using accessible and open data formats. Accessible can also mean the how the data is described and this can change overtime. For example, Rothamsted's Broadbalk experiment originally recorded grain yields as bushels, then lbs acre^-1^ and today as t ha^-1^. Each change necessitates a conversion which must be documented to ensure ongoing trust in the data provenance.    
 
@@ -88,6 +88,6 @@ Good research data management for LTE data matters because
 - LTE data takes many years to generate
 - Good RDM is necessary to ensure the continuity of data over time
 - Good RDM is necessary to ensure the accessibility of data over time
-- Good RDM is necessary to ensure the usability and interpretability of data over time
+- Good RDM is necessary to ensure the usability and interpretation of data over time
 
 ::::::
