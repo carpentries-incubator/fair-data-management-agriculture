@@ -53,7 +53,7 @@ Review the lesson datasets.
 
 :::
 
-::: INSTRUCTOR
+::: instructor
 
 Recommended participants work in groups to discuss metadata they would include. Participants can list out different metadata and present their thoughts to the wider lesson group. 
 
@@ -71,7 +71,7 @@ Make a list of the different metadata you should collect to describe your experi
 
 :::
 
-::: INSTRUCTOR
+::: instructor
 
 Recommended participants work in groups to discuss metadata they would include. Participants can list out different metadata and present their thoughts to the wider lesson group. 
 
