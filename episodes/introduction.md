@@ -79,9 +79,10 @@ LTE data managers must also ensure LTE data is both secure and remains accessibl
 
 For a more detailed overview of some of the data management challenges facing long-term experiments, based on the Rothamsted Long-term experiments see [Ostler et al, 2023](https://doi.org/10.1007/978-3-031-13276-6_7). 
 
-::: keypoints
+:::::: keypoints
 
-Good research data management for LTE data matters because:
+Good research data management for LTE data matters because
+
 - LTE data is costly to produce
 - LTE data is unique and cannot be reproduced
 - LTE data takes many years to generate
@@ -89,4 +90,4 @@ Good research data management for LTE data matters because:
 - Good RDM is necessary to ensure the accessibility of data over time
 - Good RDM is necessary to ensure the usability and interpretability of data over time
 
-:::
+::::::
