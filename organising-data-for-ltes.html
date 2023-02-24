@@ -319,7 +319,7 @@ such as Google Sheets and Microsoft Excel are useful programs for making
 tabular datasets. Most researchers are familiar with Excel, it is easy
 to use, flexible, and includes tools for analysing and visualising data.
 Excel’s flexibility gives us a lot of freedom to organise data, but this
-can lead to bad practices and data which are difficult to reuse.</p>
+can lead to bad practices which make data difficult to reuse.</p>
 <p>In the worst case Excel’s default behavior may corrupt our data. For
 example consider a value like 1/12, or SEPT1. In both examples Excel
 will, by default, convert these values to dates, even if they are not
@@ -366,34 +366,47 @@ data</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Plot names would be converted to dates in Excel</li>
+<ol style="list-style-type: decimal"><li>Plot names would be converted to dates in Excel.</li>
 <li>Treatments, FYM treatments are encoded using colour, and they key is
-not obvious</li>
-<li>Yield does not provide units</li>
-<li>Some yield values are coloured red, but not clear why</li>
+not obvious.</li>
+<li>Yield does not provide units.</li>
+<li>Some yield values are coloured red, but not clear why.</li>
+<li>Data is split into multiple tables which would be difficult to
+combine and use.</li>
 </ol><div class="section level3">
 <h3 id="problems-with-the-sidada-dataset">Problems with the Sidada dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-sidada-dataset"></a></h3>
-<ol style="list-style-type: decimal"><li>Multi-row column headings</li>
-<li>Matrix style layout</li>
-<li>Not even sure what the data is for</li>
-<li>No metadata</li>
+<ol style="list-style-type: decimal"><li>Multi-row column headings.</li>
+<li>Matrix style layout using variables (year and season) as column
+headings.</li>
+<li>Just a table, no metadata to describe the dataset so not even sure
+what the data is.</li>
 </ol></div>
 <div class="section level3">
 <h3 id="problems-with-the-chitedze-dataset">Problems with the Chitedze dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-chitedze-dataset"></a></h3>
 <ol style="list-style-type: decimal"><li>Pretty layout – try saving as CSV, mix of data and metadata on one
-sheet</li>
-<li>Headings span multiple columns</li>
-<li>Use of undefined codes</li>
-<li>Missing data flagged with -9999</li>
+sheet.</li>
+<li>Headings span multiple columns.</li>
+<li>Multiple tables in the same worksheet.</li>
+<li>Use of undefined codes.</li>
+<li>Missing data flagged with -9999.</li>
 </ol></div>
 <div class="section level3">
 <h3 id="problems-with-the-embu-dataset">Problems with the Embu dataset<a class="anchor" aria-label="anchor" href="#problems-with-the-embu-dataset"></a></h3>
-<ol style="list-style-type: decimal"><li>Inconsistent use of treatment names – first 3 years have a space
-between OM and N, OM and N rates are blank when not applied, but after
-are 0. Yield has missing values which are flagged * years 1-3 and N/A
-years 4-10</li>
-<li>Yield combines units and value, should be separate</li>
-<li>Yield has different units – bushels/acre and t/ha</li>
+<ol style="list-style-type: decimal"><li>Data is split across multiple worksheet tabs</li>
+<li>Inconsistent data: First 3 years have a space between OM and N, but
+not in subsequent years</li>
+<li>Inconsistent data: First 3 years OM and N rates are blank when not
+applied, but after are 0.</li>
+<li>Inconsistent data: Yield has missing values which are flagged *
+years 1-3 and N/A years 4-10</li>
+<li>Inconsistent data: OM types are inconsistently named
+<code>C. calothyrsus cuttings</code>, <code>Calliandra cuttings</code>,
+and <code>Calliandra cuttings</code>
+</li>
+<li>Inconsistent data: Yield combines units and value, should be
+separate</li>
+<li>Inconsistent data: Yield has different units – bushels/acre and
+t/ha</li>
 </ol></div>
 <div class="section level3">
 <h3 id="can-these-datasets-easily-be-combined-and-reused">Can these datasets easily be combined and reused<a class="anchor" aria-label="anchor" href="#can-these-datasets-easily-be-combined-and-reused"></a></h3>
@@ -503,16 +516,18 @@ information should either be stored in a separate column, or as metadata
 for the yield value column description.</p>
 </div>
 <div class="section level3">
-<h3 id="inconsistency-in-values-used">6. Inconsistency in values used<a class="anchor" aria-label="anchor" href="#inconsistency-in-values-used"></a></h3>
+<h3 id="inconsistent-values">6. Inconsistent values<a class="anchor" aria-label="anchor" href="#inconsistent-values"></a></h3>
 <p>Being inconsistent with value names can cause problems. For example,
 in the Embu data, <code>C. calothyrsus cuttings</code>,
 <code>Calliandra cuttings</code>, and <code>Calliandra cuttings</code>
 are used interchangeably and, as humans we can see these terms, in the
 context of the dataset, mean the same thing. A compuer, however, would
 treat these as different values.</p>
+<p>Being precise in how variables and values are named is essential for
+reliably interpreting the data.</p>
 </div>
 <div class="section level3">
-<h3 id="using-problematic-field-names">7. Using problematic field names<a class="anchor" aria-label="anchor" href="#using-problematic-field-names"></a></h3>
+<h3 id="problematic-field-names">7. Problematic field names<a class="anchor" aria-label="anchor" href="#problematic-field-names"></a></h3>
 <p>Column names should be descriptive of the data they hold. A brief
 descriptive name should be preferred as it removes ambiguity and better
 conveys the meaning of the data. You can provide more detail about the
@@ -548,11 +563,12 @@ human a computer will not recognise this structure, and interpret the
 second row as data. Merged cells may also be unmerged to create nameless
 columns, for example, we can see this behavior if we export the Sidada
 data as CSV:</p>
-<p>Compare between datasets 1. Treatment factors and standard experiment
-management can be interchangeable between. For example, in application
-of N is a treatment for Broadbalk and Embu, but not in Chitedze. 2.
-Collect similar information, for example soil properties but presented
-differently</p>
+</div>
+<div class="section level3">
+<h3 id="using-variables-as-column-names">9. Using variables as column names<a class="anchor" aria-label="anchor" href="#using-variables-as-column-names"></a></h3>
+</div>
+<div class="section level3">
+<h3 id="nestedmerged-row-headings">10. Nested/merged row headings<a class="anchor" aria-label="anchor" href="#nestedmerged-row-headings"></a></h3>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -562,7 +578,7 @@ differently</p>
 </h3>
 <div class="callout-content">
 <ul><li>Humans and computers can interpret data in Excel differently.</li>
-<li>sandBe aware of common problems using Excel for managing data.</li>
+<li>Be aware of common problems using Excel for managing data.</li>
 <li>Excel is not a database.</li>
 </ul></div>
 </div>
