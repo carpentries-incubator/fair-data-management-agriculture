@@ -53,15 +53,15 @@ In a new browser window, navigate to [Google Dataset Search](https://datasetsear
 
 :::::: solution 
  
-F1: Assigned a DOI (document object identifier) [https://doi.org/10.7910/DVN/4GVGAP](https://doi.org/10.7910/DVN/4GVGAP)
+F1: Assigned a DOI (document object identifier) [https://doi.org/10.7910/DVN/4GVGAP](https://doi.org/10.7910/DVN/4GVGAP).
 
-F2: Has rich metadata to describe the dataset 
+F2: Has rich metadata to describe the dataset. 
 
-F3: Metadata includes the DOI
+F3: Metadata includes the DOI.
 
-F4: Metadata is registered in a dataset repository (Harvard Dataverse)
+F4: Metadata is registered in a dataset repository (Harvard Dataverse).
 
-F4: Metadata can be indexed in searchable resource (Google dataset search)
+F4: Metadata can be indexed in searchable resource (Google dataset search).
 ::::::
 
 :::
@@ -225,9 +225,10 @@ The authors of this dataset on [simulated maize and wheat data](https://doi.org/
 ## Reasons to publish FAIR metadata for embargoed datasets
 
 Publishing FAIR metadata for embargoed datasets has several benefits including:
+
 - Metadata can be published before the results, meaning there is a citable dataset that can be referenced in articles.
-- Other researchers can find the dataset and request access. This may lead to either new collaborations or earlier additional impact from use. This may be especially useful if the value of the dataset is likely to decrease over time.
-- Some data repositories can automatically remove the embargo on a predetermined date.
+- Other researchers can find the dataset and request access. This may lead to new collaborations and earlier impact from secondary reuse. 
+- Some data repositories can automatically remove the embargo on a set date.
 
 :::
 
@@ -237,7 +238,9 @@ Publishing FAIR metadata for embargoed datasets has several benefits including:
 
 ## why should you adopt FAIR Guiding Principles
 
-Working in groups list reasons why you should adopt and follow FAIR Guiding Principles. Think about what the benefits are, who benefits and what the costs. 
+Working in groups list reasons why you should adopt and follow FAIR Guiding Principles. 
+
+Think about what the benefits are, who benefits and what the costs. 
 
 :::
  
@@ -246,6 +249,7 @@ Working in groups list reasons why you should adopt and follow FAIR Guiding Prin
 - Applying FAIR Principles make it easier to find research data.
 - Following FAIR principles makes you start to follow best practices for research data management. 
 - FAIR data is not open data, but open data should be FAIR data.
+- Good research data management through adopting FAIR principles has a cost.
 
 :::
 
