@@ -64,6 +64,8 @@ episodes:
 - fair-data.Rmd
 - metadata-for-ltes.Rmd
 - organising-data-for-ltes.Rmd
+- making-lte-data-fair.Rmd
+- databases-for-lte-data.Rmd
 - publishing-data-for-ltes.Rmd
 
 # Information for Learners
