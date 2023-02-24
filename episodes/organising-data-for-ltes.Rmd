@@ -19,7 +19,7 @@ exercises: 2
 
 ## Introduction
 
-Tables are a great way of presenting data, and spreadsheet software such as Google Sheets and Microsoft Excel are useful programs for making tabular datasets. Most researchers are familiar with Excel, it is easy to use, flexible, and includes tools for analysing and visualising data. Excel's flexibility gives us a lot of freedom to organise data, but this can lead to bad practices and data which are difficult to reuse. 
+Tables are a great way of presenting data, and spreadsheet software such as Google Sheets and Microsoft Excel are useful programs for making tabular datasets. Most researchers are familiar with Excel, it is easy to use, flexible, and includes tools for analysing and visualising data. Excel's flexibility gives us a lot of freedom to organise data, but this can lead to bad practices which make data difficult to reuse. 
 
 In the worst case Excel's default behavior may corrupt our data. For example consider a value like 1/12, or SEPT1. In both examples Excel will, by default, convert these values to dates, even if they are not intended by the user to be dates. In the example of SEPT1, this was a recognised name for a human gene which has since been renamed to SEPTIN1 specifically to avoid this type of data handling error when using Excel ([https://doi.org/10.1038/s41588-020-0669-3](https://doi.org/10.1038/s41588-020-0669-3)).  
 
@@ -40,29 +40,39 @@ Using the data tables in the lesson Excel files, review them to identify any pro
 :::::: solution
 
 ### Problems with the Broadbalk dataset
-1. Plot names would be converted to dates in Excel
-2. Treatments, FYM treatments are encoded using colour, and they key is not obvious
-3. Yield does not provide units
-4. Some yield values are coloured red, but not clear why
+
+1. Plot names would be converted to dates in Excel.
+2. Treatments, FYM treatments are encoded using colour, and they key is not obvious.
+3. Yield does not provide units.
+4. Some yield values are coloured red, but not clear why.
+5. Data is split into multiple tables which would be difficult to combine and use.
 
 ### Problems with the Sidada dataset
-1. Multi-row column headings
-2. Matrix style layout
-3. Not even sure what the data is for
-4. No metadata 
+
+1. Multi-row column headings.
+2. Matrix style layout using variables (year and season) as column headings.
+3. Just a table, no metadata to describe the dataset so not even sure what the data is.
 
 ### Problems with the Chitedze dataset
-1. Pretty layout – try saving as CSV, mix of data and metadata on one sheet
-2. Headings span multiple columns
-3. Use of undefined codes
-4. Missing data flagged with -9999
+
+1. Pretty layout – try saving as CSV, mix of data and metadata on one sheet.
+2. Headings span multiple columns.
+3. Multiple tables in the same worksheet.
+4. Use of undefined codes.
+5. Missing data flagged with -9999.
 
 ### Problems with the Embu dataset
-1. Inconsistent use of treatment names – first 3 years have a space between OM and N, OM and N rates are blank when not applied, but after are 0. Yield has missing values which are flagged * years 1-3 and N/A years 4-10
-2. Yield combines units and value, should be separate
-3. Yield has different units – bushels/acre and t/ha
+
+1. Data is split across multiple worksheet tabs
+2. Inconsistent data: First 3 years have a space between OM and N, but not in subsequent years 
+3. Inconsistent data: First 3 years OM and N rates are blank when not applied, but after are 0. 
+4. Inconsistent data: Yield has missing values which are flagged * years 1-3 and N/A years 4-10
+5. Inconsistent data: OM types are inconsistently named `C. calothyrsus cuttings`, `Calliandra cuttings`, and `Calliandra cuttings`
+6. Inconsistent data: Yield combines units and value, should be separate
+7. Inconsistent data: Yield has different units – bushels/acre and t/ha
 
 ### Can these datasets easily be combined and reused
+
 - No, these datasets cannot easily be combined.
 
 ::::::
@@ -111,11 +121,13 @@ Using formatting to convey information is an example of storing more than one pi
 
 In the Embu dataset, yield data for some years combines both the yield value and yield units. This problematic for analysis as a computer would treat the value as text instead of as a number. The unit information should either be stored in a separate column, or as metadata for the yield value column description.  
 
-### 6. Inconsistency in values used
+### 6. Inconsistent values
 
-Being inconsistent with value names can cause problems. For example, in the Embu data, `C. calothyrsus cuttings`, `Calliandra cuttings`, and `Calliandra cuttings` are used interchangeably and, as humans we can see these terms, in the context of the dataset, mean the same thing. A compuer, however, would treat these as different values.
+Being inconsistent with value names can cause problems. For example, in the Embu data, `C. calothyrsus cuttings`, `Calliandra cuttings`, and `Calliandra cuttings` are used interchangeably and, as humans we can see these terms, in the context of the dataset, mean the same thing. A compuer, however, would treat these as different values. 
 
-### 7. Using problematic field names
+Being precise in how variables and values are named is essential for reliably interpreting the data.
+
+### 7. Problematic field names
 
 Column names should be descriptive of the data they hold. A brief descriptive name should be preferred as it removes ambiguity and better conveys the meaning of the data. You can provide more detail about the column data in a separate metadata file. Abbreviations may make sense now, but will they make sense in 6 months time or to other researchers unfamiliar with your naming convention? Abbreviations are best used only when they widely accepted within a research community.
 
@@ -132,15 +144,14 @@ year_5 | 5th year
 
 Using multi-row column headings can be useful mechanism for grouping related columns together in a hierarchical naming structure. For example, in the Sidada dataset column headings are across two rows, with cells merged to illustrate the grouped columns. while this works for a human a computer will not recognise this structure, and interpret the second row as data. Merged cells may also be unmerged to create nameless columns, for example, we can see this behavior if we export the Sidada data as CSV:
 
-Compare between datasets
-1.	Treatment factors and standard experiment management can be interchangeable between. For example, in application of N is a treatment for Broadbalk and Embu, but not in Chitedze.
-2.	Collect similar information, for example soil properties but presented differently
+### 9. Using variables as column names
 
+### 10. Nested/merged row headings
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Humans and computers can interpret data in Excel differently.
-- sandBe aware of common problems using Excel for managing data.
+- Be aware of common problems using Excel for managing data.
 - Excel is not a database.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

@@ -7,7 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is metadata?
-- Why do we use metadata for?
+- Why do we need metadata for?
 - What metadata should we collect for LTEs?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -18,7 +18,6 @@ exercises: 2
 - Distinguish different types of metadata.
 - Understand what makes metadata interoperable.
 - Know how to decide what to include in metadata.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
