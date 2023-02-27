@@ -68,6 +68,7 @@ F3: Metadata includes the DOI.
 F4: Metadata is registered in a dataset repository (Harvard Dataverse).
 
 F4: Metadata can be indexed in searchable resource (Google dataset search).
+
 ::::::
 
 :::
@@ -89,13 +90,14 @@ Using the dataset “Replication Data for: Soil Biological Indices in Short and 
 
 :::::: solution 
 
-A1: Dataset can be retrieved by its DOI (identifier) over the http (standardised communication protocol)
+A1: Dataset can be retrieved by its DOI (identifier) over http (standardised communication protocol)
 
 A1.1: http is an open, free and universally implementable protocol.
 
 A1.2: although it is not used here, http supports authentication and authorisation.
 
 A2: We cannot test this using this example as the dataset is available with the metadata.
+
 ::::::
 :::
 
