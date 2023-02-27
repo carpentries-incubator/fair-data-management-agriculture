@@ -44,10 +44,15 @@ Descriptive and structural metadata should be added continuously throughout the 
 ## Identifying Metadata
 
 Review the lesson datasets.
+
 - What types of metadata do they collect?
+
 - Are they missing key metadata?
+
 - How consistent are the datasets in their metadata? 
+
 - How do they do they differ?
+
 - Do you think the metadata is FAIR?
 
 :::
