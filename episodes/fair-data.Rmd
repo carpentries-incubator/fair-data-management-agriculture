@@ -20,6 +20,12 @@ exercises: 2
 
 :::
 
+::: instructor
+
+The [FAIR data crib sheet](files/FAIR-Crib-Sheet.docx) is provided as a reference resource for participants. Participants can refer to this document or print outs during exercises in this episode.
+
+:::
+
 ## Introduction
 
 The [FAIR Guiding Principles for scientific data management and stewardship](https://doi.org/10.1038/sdata.2016.18) were published in 2016 and comprise of 15 guiding principles which aim to:
