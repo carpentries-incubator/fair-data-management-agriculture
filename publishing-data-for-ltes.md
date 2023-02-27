@@ -1,5 +1,5 @@
 ---
-title: 'publishing-data-for-ltes'
+title: 'Publishing LTE data'
 teaching: 10
 exercises: 2
 ---
@@ -21,7 +21,21 @@ exercises: 2
 
 ## Introduction
 
-A data repository is an storage infrastructure designed to preserve research data and make findable and accessible to other researchers. 
+A data repository is a storage infrastructure designed to preserve research data to make it findable and accessible to other researchers. 
+
+::: callout
+
+### What about project websites and cloud resources like Github or Dropbox
+
+Basic project websites, without any data repository infrastructure are are not suitable for publishing datasets because dataset metadata cannot easily be indexed and searched.
+
+Github is a version control platform original developed for code management, it is designed for uploaded content to be frequently updated, the opposite use of a repository. 
+
+Dropbox and similar services are cloud file hosting services. 
+
+None of these options have features such as PID allocation, versioning, or machine readable, indexed metadata, and therefore not suitable for publishing data.  
+
+:::
 
 ## Data Repository features
 
@@ -39,11 +53,39 @@ DOI stands for Domain Object Identifier and is a type of Persistent Identifier m
 1. The DOI is permanent, DataCite guarantees it will resolve to a metadata landing page, even if the link to the data is broken. 
 2. Metadata to describe the dataset is always available, even if the dataset is not.
 
+::: challenge
+
+### Review the DataCite Metadata Schema
+
+Review the [DataCite Metadata Schema](https://schema.datacite.org/meta/kernel-4.4/) to get a better understanding of the types of metadata it can record.
+
+- How does the schema identify relationships between different research outputs?
+
+:::
+
+
 ### Data versioning
 
-Datasets published with a DOI are immutable, meaning you cannot alter the data. For example, making a correction to a published dataset or appending new records means the data has changed and must therefore be republished with a new DataCite DOI. This is an important concept for supporting reproducible science as it guarantees all users of a dataset will use exactly the same data over time. 
+Datasets published with a DOI are immutable, meaning you should not alter the data. For example, making a correction to a published dataset or appending new records means the data has changed and must therefore be republished with a new DataCite DOI. This is an important concept for supporting reproducible science as it guarantees all users of a dataset will use exactly the same data over time. 
 
 DataCite DOIs provide a mechanism for both versioning datasets and identifying relationships between two datasets, in this case stating Dataset X is a newer version of Dataset Y.
+
+::: callout
+
+### Versioning LTE data
+
+LTEs accumulate new data overtime, meaning the data we publish now will be updated repeatedly in the future. There are three strategies for publishing data. 
+
+1. Defined period publishing cycle.
+2. New published dataset. 
+3. Dynamic citation publishing.
+
+#### 1. Defined period publishing cycle
+
+In this model new datasets are published following a defined cycle, for example, annually or every 5 years. Each time a new dataset is published it replaces the previous dataset as a new version. Using the DataCite metadata  
+
+
+:::
 
 ::: callout
 
@@ -58,6 +100,7 @@ Github is a version control platform original developed for code management. Dro
 Data repositories often provide other features to improve researcher experience including:
 - Embargo periods, enabling dataset discovery, but not immediate access.
 - Reporting metrics such as views, downloads, citations and other interactions.
+- Analytical pipelines. Normally only found in specialist data repositories which have rigorous submission pipelines checking data quality and host similar data types.  
 
 ### Specialist vs Generalist repositories
 
@@ -65,20 +108,19 @@ In several domains specialist data repositories have been developed to better se
 
 Feature | Specialist | Generalist | Institute 
 ------- | ---------- | ---------- | ---------
-Identifier | Can be either a unique repository accession number or DataCite DOI | DataCite DOI | DataCite DOI
-Metadata | Will define detailed metadata to describe the type of data. | Administrative metadata based on DataCite schema. | Administrative metadata based on DataCite schema, but institutes may have local policies to improve metadata quality
-Data format | May proscribe the data format using an open community standard | No special rules on data format | Institutes may have local policies on data formats.
-Support | May provide dedicated data curation support for submission processes | None usually provided | Institute may have dedicated research data stewards to support data publishing.
-Data Quality Control | Often have strict requirements | Minimal | Depends on local policy
-Relationship to other repository data | Good | variable | Aligned to institute research areas
-Tools integration | May feed directly into analytical pipelines for processing the repostory data types | None | Some open source repositories (CKAN, DataVerse) support cross dataset querying for similarly structured tabular data.
+Identifier | Unique repository accession number, DataCite DOI. | DataCite DOI | DataCite DOI
+Metadata | Detailed metadata to describe the type of data and or domain. | Administrative metadata using DataCite schema. | Administrative metadata using DataCite schema, but may have local policies to improve metadata quality.
+Data format | Proscribed data format using an open community standard. | No special rules or quality controls, but may make recommendations. | May have local policies on data formats.
+Support | May provide data curation and submission support. | Basic. | May have Research Data Stewards to support.
+Data Quality Control | Often have strict requirements. | Minimal to none. | Depends on local policy.
+Relationship to repository data | Good | None | Aligned to institute research areas.
+Tools integration | May feed directly into analytical pipelines for processing the repository data types. | None | Some open source repositories (CKAN, Dataverse) support cross dataset querying for similarly structured tabular data.
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Data repositories provide features supporting FAIR data.
+- Published datasets are immutable - the data must not be altered.
+- Published datasets are versioned.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
